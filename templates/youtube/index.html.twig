@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello YoutubeController!{% endblock %}
+
+{% block body %}
+    {{ form(form) }}
+
+    {%  for yt in youtubes %}
+    <p><img src="{{ yt.url | youtube_thumbnail }}" alt=""> - {{ yt.name }}</p>
+    {% endfor %}
+{% endblock %}
